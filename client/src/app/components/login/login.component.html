@@ -1,0 +1,57 @@
+<nav>
+    <div class="logoContainer">
+        <a routerLink="/" style="cursor:pointer">GROUP 18</a> 
+    </div>
+
+    <ul>
+        <li>
+            <a routerLink="/auth/signup" style="cursor:pointer">Sign up</a>
+        </li>
+    </ul>
+
+</nav>
+
+<div class="form-container">
+    <div class="form-background">
+        <form [formGroup]="loginForm" (ngSubmit)="doPost()">
+
+            <div class="title">
+                Login to your Account
+            </div>
+
+            <div class="input-container"> 
+                <input formControlName="email" type="email" name="email" class="input" placeholder="Email: admin@gmail.com">
+            </div>
+            <div class="error" *ngIf="loginForm.get('email')?.invalid && (loginForm.get('email')?.dirty || loginForm.get('email')?.touched)">
+                <span *ngIf="loginForm.get('email')?.hasError('required')">
+                    Error: Email field cannot be empty 
+                </span>
+                <span *ngIf="loginForm.get('email')?.hasError('email')">
+                    Please enter a valid email address
+                </span>
+            </div>
+
+            <div class="input-container"> 
+                <input type="password" formControlName="password" name="password" class="input" placeholder="Password: 123456789">
+            </div>
+            <div class="error" *ngIf="loginForm.get('password')?.invalid && (loginForm.get('password')?.dirty || loginForm.get('password')?.touched)">
+                <span *ngIf="loginForm.get('password')?.hasError('required')">
+                    Error: Password field cannot be empty 
+                </span>
+            </div>
+            
+            <div class="input-container">
+                <button mat-raised-button color="primary" type="submit">Login</button>
+            </div>
+
+            <div class="successful" *ngIf="status">
+                <span>{{status.message}}</span>
+            </div>
+            
+            <div >
+                <a routerLink="/sub/signup" class="link">Don't have an account? Sign up here</a>
+            </div>
+
+        </form>
+    </div>
+</div>

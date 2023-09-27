@@ -1,0 +1,113 @@
+/* Reset default styles for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set a sans-serif font for all elements */
+body {
+    font-family: sans-serif;
+}
+
+/* Style the navigation bar */
+nav {
+    display: flex;
+    justify-content: space-around;
+    min-height: 5vh;
+    background-color: rgb(69, 69, 69);
+    align-items: center;
+}
+
+nav .logoContainer {
+    font-size: 20px;
+    font-weight: 900;
+    color: rgb(255, 255, 255);
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+nav div a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+nav ul{
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    width:25% ;
+}
+
+nav ul li a{
+    font-size: 18px;
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+
+nav li a:hover{ 
+    color: rgb(102, 173, 233); 
+}
+
+/* Style the form container */
+.form-container {
+    position: relative;
+    min-height: 100vh; /* Set min-height to cover the entire viewport */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../../../assets/dashboard.jpg'); /* Set your background image here */
+    background-size: cover; /* Make the background cover the entire container */
+    background-position: center; /* Center the background image */
+}
+
+.form-background {
+    width: 500px;
+    background-color: rgba(0, 0, 0, 0.85); /* Use rgba to control background opacity */
+    padding: 20px;
+}
+
+.title {
+    color: #eee;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.input-container {
+    margin-top: 20px;
+}
+
+.input {
+    background-color: #6e42ba44;
+    border: 0;
+    box-sizing: border-box;
+    color: #eee;
+    font-size: 14px;
+    height: 40px;
+    width: 100%;
+    outline: 0;
+    padding: 4px 20px;
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+    padding-top: 10px;
+    font-size: 13px;
+    display: block;
+}
+
+.link:hover {
+    color: rgb(109, 66, 186);
+}
+
+.error {
+    color: rgb(216, 5, 5);
+}
+
+.successful {
+    color: rgb(5, 216, 5);
+}

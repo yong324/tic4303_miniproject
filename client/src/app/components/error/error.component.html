@@ -1,0 +1,36 @@
+<nav *ngIf="!isLoggedIn">
+    <div class="logoContainer">
+        <a routerLink="/" style="cursor:pointer">Group 18</a> 
+    </div>
+    
+    <ul>
+        <li>
+            <a routerLink="/auth/login" style="cursor:pointer">Login</a>
+        </li>
+        <li>
+            <a routerLink="/auth/signup" style="cursor:pointer">Sign Up</a>
+        </li>
+    </ul>
+</nav>
+
+<nav *ngIf="isLoggedIn">
+    <div class="logoContainer">
+        <a routerLink="/" style="cursor:pointer">Group 18</a> 
+    </div>
+    <ul>
+        <li *ngIf="role == 'ADMIN'">
+            <a routerLink="/api/dashboard" style="cursor:pointer">Admin Dashboard</a>
+        </li>
+        <li>
+            <a (click)="logout()" style="cursor:pointer">Logout</a>
+        </li>
+    </ul>
+</nav>
+
+<body>
+    <div class="overlay"></div>
+        <div class="container">
+            <h1>ERROR 403 - Forbidden</h1>
+            <h3>You don't have permission to access this resource.</h3>
+        </div>
+</body>

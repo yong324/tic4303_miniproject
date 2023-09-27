@@ -1,0 +1,69 @@
+<nav *ngIf="!isLoggedIn">
+    <div class="logoContainer">
+        <a routerLink="/" style="cursor:pointer">Group 18</a> 
+    </div>
+    
+    <ul>
+        <li>
+            <a routerLink="/auth/login" style="cursor:pointer">Login</a>
+        </li>
+        <li>
+            <a routerLink="/auth/signup" style="cursor:pointer">Sign Up</a>
+        </li>
+    </ul>
+</nav>
+
+<nav *ngIf="isLoggedIn">
+    <div class="logoContainer">
+        <a routerLink="/" style="cursor:pointer">Group 18</a> 
+    </div>
+    
+    <ul>
+        <li *ngIf="role == 'ADMIN'">
+            <a routerLink="/api/dashboard" style="cursor:pointer">Admin Dashboard</a>
+        </li>
+        <li>
+            <a (click)="logout()" style="cursor:pointer">Logout</a>
+        </li>
+    </ul>
+</nav>
+
+<div class="form-container">
+    <div class="table-container">
+
+        <div class="title">
+            <h2>
+                Hi {{email}}, <br>
+                Welcome to the Admin Dashboard!
+            </h2>
+        </div>
+
+    </div>
+
+    <div>
+        <h3>List of Registered Interest:</h3>
+    </div>
+
+    <div *ngFor="let i of interests">
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Country</th>
+                <th>Gender</th>
+                <th>Qualification</th>
+            </tr>
+            <tr>
+                <td>{{i.id}}</td>
+                <td>{{i.name}}</td>
+                <td>{{i.email}}</td>
+                <td>{{i.phone}}</td>
+                <td>{{i.country}}</td>
+                <td>{{i.gender}}</td>
+                <td>{{i.qualification}}</td>
+            </tr>
+        </table>
+    </div>
+</div>

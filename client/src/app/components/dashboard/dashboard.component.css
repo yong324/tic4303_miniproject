@@ -1,0 +1,107 @@
+/* Reset default styles for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    min-height: 5vh;
+    background-color: rgb(69, 69, 69);
+    align-items: center;
+    font-family: sans-serif;
+}
+
+nav .logoContainer{
+    font-size: 20px;
+    font-weight: 900;
+    color: rgb(255, 255, 255); 
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+nav div a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+nav ul{
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    width:25% ;
+}
+
+nav ul li a{
+    font-size: 18px;
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+
+nav li a:hover{ 
+    color: rgb(102, 173, 233); 
+}
+
+/* Set a sans-serif font for all elements */
+body {
+    font-family: sans-serif;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    background-image: url('../../../assets/dashboard.jpg'); /* Set your background image here */
+    background-size: cover; /* Make the background cover the entire viewport */
+    background-position: center; /* Center the background image */
+    color: white; /* Set text color to white */
+}
+
+/* Style the form container */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Align content to the left */
+    justify-content: center; /* Center vertically */
+    min-height: 100vh; /* Ensure the container covers the entire viewport height */
+    padding: 20px;
+    background-image: url('../../../assets/dashboard.jpg'); /* Set your background image here */
+    background-size: cover; /* Make the background cover the entire viewport */
+    background-position: center; /* Center the background image */
+}
+
+.title h2 {
+    text-align: center; /* Align title to the left */
+    margin-bottom: 20px; /* Add space between title and table */
+    color: white; /* Set text color to white */
+}
+
+h3 {
+    color: white;
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 800px; /* Adjust the maximum width of the table */
+    margin: 0 auto; /* Center the table horizontally */
+}
+
+table, th, td {
+    border: 1px solid white; /* Add border to table and table cells with white color */
+    color: white; /* Set text color to white */
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+/* Add additional styles as needed for your specific design */
