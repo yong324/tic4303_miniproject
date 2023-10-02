@@ -44,7 +44,9 @@
         <h3>List of Registered Interest:</h3>
     </div>
 
-    <div *ngFor="let i of interests">
+    <br>
+
+    <div>
         <table>
             <tr>
                 <th>ID</th>
@@ -55,7 +57,7 @@
                 <th>Gender</th>
                 <th>Qualification</th>
             </tr>
-            <tr>
+            <tr *ngFor="let i of interests">
                 <td>{{i.id}}</td>
                 <td>{{i.name}}</td>
                 <td>{{i.email}}</td>
