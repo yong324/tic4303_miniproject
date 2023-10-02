@@ -41,7 +41,7 @@
             </div>
             
             <div class="input-container">
-                <button mat-raised-button color="primary" type="submit">Login</button>
+                <button mat-raised-button color="primary" type="submit" [disabled]="!loginForm.valid">Login</button>
             </div>
 
             <div class="successful" *ngIf="status">

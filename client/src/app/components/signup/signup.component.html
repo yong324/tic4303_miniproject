@@ -70,7 +70,7 @@
             </div>
             
             <div class="input-container">
-                <button mat-raised-button color="primary" type="submit">Signup</button>
+                <button mat-raised-button color="primary" type="submit" [disabled]="!signupForm.valid">Signup</button>
             </div>
 
             <div class="successful" *ngIf="status">
